@@ -11,3 +11,7 @@ ggml-*.bin
 .vscode/
 .idea/
 .DS_Store
+
+# Russian working docs (kept locally only)
+/docs/spec.ru.md
+/docs/PLAN.ru.md

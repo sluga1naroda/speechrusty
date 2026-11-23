@@ -333,9 +333,7 @@ speechrusty/
 │   └── pipeline/     threads and queues that tie it all together
 ├── spikes/           early throw-away prototypes (window, audio, ML); not part of the workspace
 ├── docs/
-│   ├── ARCHITECTURE.md
-│   ├── PLAN.ru.md    working design spec and stage log (Russian)
-│   └── spec.ru.md    original product brief (Russian)
+│   └── ARCHITECTURE.md
 └── build.cmd         Windows build wrapper (MSVC env + NMake)
 ```
 
