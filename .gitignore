@@ -1,0 +1,13 @@
+/target
+spikes/*/target
+# machine-specific paths (see .cargo/config.toml.example)
+/.cargo/config.toml
+*.log
+*.wav
+!crates/audio/tests/fixtures/*.wav
+*.gguf
+*.onnx
+ggml-*.bin
+.vscode/
+.idea/
+.DS_Store

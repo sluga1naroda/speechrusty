@@ -1,0 +1,36 @@
+[workspace]
+resolver = "3"
+members = ["crates/*"]
+exclude = ["spikes"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+
+[workspace.dependencies]
+sr-core = { path = "crates/core" }
+sr-i18n = { path = "crates/i18n" }
+sr-store = { path = "crates/store" }
+sr-pipeline = { path = "crates/pipeline" }
+sr-audio = { path = "crates/audio" }
+sr-asr = { path = "crates/asr" }
+sr-mt = { path = "crates/mt" }
+sr-diarize = { path = "crates/diarize" }
+anyhow = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.9"
+directories = "6"
+async-channel = "2"
+log = "0.4"
+env_logger = "0.11"
+
+[profile.dev.package."*"]
+opt-level = 2
+
+# knf-rs-sys picks Debug/Release via cfg!(debug_assertions) of its own build script;
+# a Debug C++ build links against the debug CRT (/MDd) and doesn't match Rust (/MD).
+# Only for this package (its build script): a global build-override breaks gpui's proc-macros.
+[profile.dev.package.knf-rs-sys]
+debug-assertions = false

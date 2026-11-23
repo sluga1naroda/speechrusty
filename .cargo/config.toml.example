@@ -1,0 +1,11 @@
+# Copy to .cargo/config.toml and adjust for your machine (that file is git-ignored).
+
+[build]
+# Keep the target dir OUTSIDE OneDrive/Dropbox: sync locks PDB files and MSVC fails with C1041.
+target-dir = "C:/dev/speechrusty-target"
+
+[env]
+# Windows only: libclang for bindgen, Vulkan SDK for the ggml Vulkan backend, CMake for whisper.cpp/llama.cpp.
+LIBCLANG_PATH = "C:/Program Files/LLVM/bin"
+VULKAN_SDK = "C:/VulkanSDK/1.4.xxx.0"
+CMAKE = "C:/Program Files/CMake/bin/cmake.exe"
