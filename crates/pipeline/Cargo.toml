@@ -1,0 +1,17 @@
+[package]
+name = "sr-pipeline"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+sr-core.workspace = true
+sr-audio.workspace = true
+sr-asr.workspace = true
+sr-mt.workspace = true
+sr-diarize.workspace = true
+async-channel.workspace = true
+log.workspace = true
+hound = "3"
+
+[dev-dependencies]
+env_logger.workspace = true
