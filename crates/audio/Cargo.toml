@@ -1,0 +1,15 @@
+[package]
+name = "sr-audio"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+log.workspace = true
+cpal = "0.18"
+rubato = "0.16"
+earshot = "1.2"
+
+[dev-dependencies]
+hound = "3"
+env_logger.workspace = true
