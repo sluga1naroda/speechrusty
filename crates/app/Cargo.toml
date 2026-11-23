@@ -1,0 +1,24 @@
+[package]
+name = "sr-app"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "speechrusty"
+path = "src/main.rs"
+
+[dependencies]
+sr-core.workspace = true
+sr-i18n.workspace = true
+sr-store.workspace = true
+sr-pipeline.workspace = true
+anyhow.workspace = true
+log.workspace = true
+env_logger.workspace = true
+gpui-kit = "0.10"
+global-hotkey = "0.10"
+sys-locale = "0.3"
+
+[target.'cfg(windows)'.dependencies]
+windows = { version = "0.61", features = ["Win32_Foundation", "Win32_UI_WindowsAndMessaging"] }
+raw-window-handle = "0.6"
