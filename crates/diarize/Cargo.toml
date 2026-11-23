@@ -1,0 +1,13 @@
+[package]
+name = "sr-diarize"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+log.workspace = true
+tract-onnx = "0.23"
+knf-rs = "0.3"
+
+[dev-dependencies]
+hound = "3"
