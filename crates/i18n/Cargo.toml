@@ -1,0 +1,7 @@
+[package]
+name = "sr-i18n"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+sr-core.workspace = true
