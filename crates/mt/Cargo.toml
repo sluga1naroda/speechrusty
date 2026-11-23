@@ -1,0 +1,13 @@
+[package]
+name = "sr-mt"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+sr-core.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+anyhow.workspace = true
+log.workspace = true
+
+[dev-dependencies]
